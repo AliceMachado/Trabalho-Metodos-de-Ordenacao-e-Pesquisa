@@ -1,13 +1,18 @@
-package Teste_1;
+package Ordenacao_e_pesquisa;
 
+import java.util.*;
 import java.io.*;
 
-public class ManipuladorArquivo {
+public class ManipuladorArquivo extends Principal{
 	
-public static void leitor(String path) throws IOException {
+	public double linha_num;
+	public double linha_num2;
+	public static String linha = "";
+	
+	public static void leitor(String path) throws IOException {
 		
 		BufferedReader buffRead = new BufferedReader(new FileReader(path));
-		String linha = "";
+		
 		while (true) {
 			if (linha != null) {
 				System.out.println(linha);
@@ -17,6 +22,9 @@ public static void leitor(String path) throws IOException {
 			}
 		buffRead.close();
 	}
+	
+	
+	
 	
 }
 #Teste
