@@ -9,7 +9,7 @@ public class ManipuladorArquivo{
 	public static double linha_num;
 	public static double linha_num2;
 	
-	public static void leitor(String path) throws IOException {
+	public static void leitorBubbleSort(String path) throws IOException {
 		
 		BufferedReader buffRead = new BufferedReader(new FileReader(path));
 		
