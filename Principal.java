@@ -30,12 +30,12 @@ public class Principal {
 			break;
 			
 		case 3:
-			
+			ManipuladorArquivo.leitorBubbleSort(path);
+			ManipuladorArquivo BubbleSort = new ManipuladorArquivo();
+			System.out.println(BubbleSort.linha_num);
 			break;
 		default: extracted(opcao);
 		}
-		
-		ManipuladorArquivo.leitor(path);
 		teclado.close();
 	}
 
