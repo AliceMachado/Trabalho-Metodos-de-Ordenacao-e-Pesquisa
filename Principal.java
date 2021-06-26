@@ -15,7 +15,7 @@ public class Principal {
 		System.out.println("---------------Menu---------------");
 		System.out.println("1 - Método de ordenação Insertion Sort");
 		System.out.println("2 - Método de ordenação Quick Sort");
-		System.out.println("3 - Método de ordenação Bobble Sort");
+		System.out.println("3 - Método de ordenação Bubble Sort");
 		System.out.println("----------------------------------");
 		System.out.println("Escolha uma opção do menu acima: ");
 		opcao = teclado.nextInt();
