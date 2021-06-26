@@ -27,4 +27,3 @@ public class ManipuladorArquivo extends Principal{
 	
 	
 }
-#Teste
