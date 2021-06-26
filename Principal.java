@@ -31,9 +31,8 @@ public class Principal {
 			
 		case 3:
 			ManipuladorArquivo.leitorBubbleSort(path);
-			ManipuladorArquivo BubbleSort = new ManipuladorArquivo();
-			System.out.println(BubbleSort.linha_num);
 			break;
+			
 		default: extracted(opcao);
 		}
 		teclado.close();
