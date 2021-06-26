@@ -19,3 +19,4 @@ public static void leitor(String path) throws IOException {
 	}
 	
 }
+#Teste
