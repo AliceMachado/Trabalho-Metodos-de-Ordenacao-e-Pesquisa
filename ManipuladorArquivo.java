@@ -14,28 +14,31 @@ public class ManipuladorArquivo{
 		BufferedReader buffRead = new BufferedReader(new FileReader(path));
 		linha = buffRead.readLine();
 		
-		ArrayList<Double> numeros = new ArrayList<>();
+		ArrayList<Integer> numeros = new ArrayList<Integer>();
 		
-		while (true) {
+		while (buffRead.ready()) {
 			if (linha != null) {
-				linha_num = Double.parseDouble(linha);
+				linha_num = Integer.parseInt(linha);
 				numeros.add(linha_num);
 		        Arrays.toString(numeros.toArray());
 			} else
 				break;
+			
+			for (int i = 0; i < numeros.size(); i++) {  
+	        	numeros.set(i, linha_num);
+	        }
+	        for (int i = 0; i < numeros.size(); i++) { 
+	        	numeros.get(i);
+	            if(numeros.get(i) > linha_num){
+	                linha_num = numeros.get(i);
+	            }
+	        }
 				linha = buffRead.readLine();
 			}
         
-        for (int i = 0; i < numeros.size(); i++) {  
-        	numeros.set(i, linha_num);
+        for (int i = 0; i < numeros.size(); i++) {
+            System.out.println(numeros.get(i));
         }
-        for (int i = 0; i < numeros.size(); i++) { 
-        	numeros.get(i);
-            if(numeros.get(i) > linha_num){
-                linha_num = numeros.get(i);
-            }
-        }
-        System.out.println(numeros);
 		buffRead.close();
 	}
 }
