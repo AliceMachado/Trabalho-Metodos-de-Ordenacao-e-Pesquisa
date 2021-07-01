@@ -22,7 +22,7 @@ public class Principal {
 		
 		switch (opcao) {
 		case 1:
-			
+			ManipuladorArquivo.leitorInsertionSort(path);
 			break;
 		
 		case 2:
