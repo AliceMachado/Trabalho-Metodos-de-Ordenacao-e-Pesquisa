@@ -8,6 +8,41 @@ public class ManipuladorArquivo{
 	public static String linha;
 	public static double linha_num;
 	
+	public static void leitorInsertionSort(String path) throws IOException {
+		//Insertion sort
+		int j, x;
+		BufferedReader buffRead = new BufferedReader(new FileReader(path));
+		linha = buffRead.readLine();
+		
+		ArrayList<Integer> numeros = new ArrayList<>();
+		
+		while (true) {
+			if (linha != null) {
+				linha_num = Integer.parseInt(linha);
+				numeros.add(linha_num);
+		        Arrays.toString(numeros.toArray());
+			} else
+				break;
+				linha = buffRead.readLine();
+			}
+        
+        for (int i = 0; i < numeros.size(); i++) {  
+        	numeros.set(i, linha_num);
+        }
+        for (int i = 1; i < numeros.size(); i++) {
+        x = numeros.get(i);	
+        j = i - 1;
+        
+        for (j = i - 1; j>=0 && x < numeros.get(j); j--) {
+        	numeros.set(j+1, numeros.get(j));
+        	numeros.set(j+1, x);
+        }
+        
+        System.out.println(numeros);
+		buffRead.close();
+        }
+	}
+	
 	public static void leitorBubbleSort(String path) throws IOException {
 		//Bubble sort
 		
