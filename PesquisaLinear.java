@@ -13,7 +13,7 @@ public class PesquisaLinear {
 	}
 	//até aqui
 	
-	//a parti daqui é a função linear simples, vou melhora-la
+	//a parti daqui é a função linear simples, 
 	System.out.println("Qual é o número que você busca?");
 	Scanner leitor = new Scanner(System.in);
 	int buscado = leitor.nextInt();
@@ -26,7 +26,7 @@ public class PesquisaLinear {
 		}
 	}
 	
-	//indica se achou ou nao
+	//indica se achou ou nao, pretendo melhorar essa parte, indicando qual foi o numero buscado
 	if (achou == true) {
 		System.out.println("Achou");
 	}else {
