@@ -51,7 +51,7 @@ public class ManipuladorArquivo{
 		
 		ArrayList<Integer> numeros = new ArrayList<Integer>();
 		
-		while (buffRead.ready()) {
+		while (true) {
 				if (linha != null) {
 					linha_num = Integer.parseInt(linha);
 					numeros.add(linha_num);
