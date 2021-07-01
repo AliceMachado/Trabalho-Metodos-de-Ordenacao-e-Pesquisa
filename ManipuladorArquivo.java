@@ -52,28 +52,40 @@ public class ManipuladorArquivo{
 		ArrayList<Integer> numeros = new ArrayList<Integer>();
 		
 		while (buffRead.ready()) {
-			if (linha != null) {
-				linha_num = Integer.parseInt(linha);
-				numeros.add(linha_num);
-		        Arrays.toString(numeros.toArray());
-			} else
-				break;
-			
-			for (int i = 0; i < numeros.size(); i++) {  
+				if (linha != null) {
+					linha_num = Integer.parseInt(linha);
+					numeros.add(linha_num);
+			        Arrays.toString(numeros.toArray());
+				} else
+					break;
+				
+			/*for (int i = 0; i < numeros.size(); i++) {  
 	        	numeros.set(i, linha_num);
-	        }
+	        }*/
+	        for(int i = 0; i < numeros.size() - 1; i++) {
+	        	boolean estaOrdenado = true;
+			    for(int j = 0; j < numeros.size() - 1 - i; j++) {
+			    	if(numeros.get(j) > numeros.get(j + 1)) {
+			    		int aux = numeros.get(j);
+			    		numeros.set(j, numeros.get(j + 1));
+			    		numeros.set(j + 1, aux);
+			    		estaOrdenado = false;
+			    	}
+			    }
+			    if(estaOrdenado)
+			        break;
+			}
+	        
 	        for (int i = 0; i < numeros.size(); i++) { 
 	        	numeros.get(i);
 	            if(numeros.get(i) > linha_num){
 	                linha_num = numeros.get(i);
 	            }
 	        }
-				linha = buffRead.readLine();
-			}
+		linha = buffRead.readLine();
+		}
         
-        for (int i = 0; i < numeros.size(); i++) {
-            System.out.println(numeros.get(i));
-        }
+        	System.out.println(numeros);
 		buffRead.close();
 	}
 }
