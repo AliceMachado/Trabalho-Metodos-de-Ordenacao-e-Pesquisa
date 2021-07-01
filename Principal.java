@@ -39,6 +39,6 @@ public class Principal {
 	}
 
 	private static void extracted(int opcao) {
-		throw new IllegalArgumentException("Unexpected value: " + opcao);
+		throw new IllegalArgumentException("Valor inválido: " + opcao);
 	}
 }
