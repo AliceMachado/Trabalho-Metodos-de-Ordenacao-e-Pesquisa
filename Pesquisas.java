@@ -17,7 +17,7 @@ public class Pesquisas {
 		switch(opcao) {
 		 	case 1: 
 		 		//chama metodo pesquisa binaria
-				//precisa ser adicionado
+				pesquisaBinaria.binaria(ManipuladorArquivo.numeros);
 		 		break;
 		 	case 2:
 				//chama o metodo de pesquisa linear
