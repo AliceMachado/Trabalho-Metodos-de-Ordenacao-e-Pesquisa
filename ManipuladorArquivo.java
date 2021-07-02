@@ -56,10 +56,6 @@ public class ManipuladorArquivo{
 			        Arrays.toString(numeros.toArray());
 				} else
 					break;
-				
-			/*for (int i = 0; i < numeros.size(); i++) {  
-	        	numeros.set(i, linha_num);
-	        }*/
 	        for(int i = 0; i < numeros.size() - 1; i++) {
 	        	boolean estaOrdenado = true;
 			    for(int j = 0; j < numeros.size() - 1 - i; j++) {
