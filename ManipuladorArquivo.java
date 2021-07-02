@@ -26,18 +26,19 @@ public class ManipuladorArquivo{
 				linha = buffRead.readLine();
 			}
         
-      for (int i = 1; i < numeros.size(); i++) {
-	        x = numeros.get(i);
-	        j = i - 1;
-	            while (j >= 0 && numeros.get(j) > x) {
-	                numeros.set(j + 1, numeros.get(j));
-	                j = j - 1;
-	            }
-	            numeros.set(j + 1, x);
-        
-        System.out.println(numeros);
+      		for (int i = 1; i < numeros.size(); i++) {
+	       		x = numeros.get(i);
+	        	j = i - 1;
+	            	while (j >= 0 && numeros.get(j) > x) {
+	                	numeros.set(j + 1, numeros.get(j));
+	                	j = j - 1;
+	            	}
+	            	numeros.set(j + 1, x);
+        	}
+		for(int i = 0; i < numeros.size(); i++) {
+			System.out.println(numeros.get(i));
+		}
 		buffRead.close();
-        }
 	}
 	
 	public static void leitorBubbleSort(String path) throws IOException {
@@ -82,7 +83,9 @@ public class ManipuladorArquivo{
 		linha = buffRead.readLine();
 		}
         
-        	System.out.println(numeros);
+        	for(int i = 0; i < numeros.size(); i++) {
+			System.out.println(numeros.get(i));
+		}
 		buffRead.close();
 	}
 }
