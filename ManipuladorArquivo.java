@@ -91,4 +91,34 @@ public class ManipuladorArquivo{
 		buffRead.close();
 
 	}
+	public static void QuickSort(ArrayList<Long> num, int ini, int fim) {
+		int i = ini;
+		int f = fim;
+		Long pivo = num.get((int) ((i + f) / 2));
+		Long k;
+
+		while (i <= f) {
+			while (num.get(i) < pivo) {
+				i = i + 1;
+			}
+			while (num.get(f) > pivo) {
+				f = f - 1;
+			}
+			if (i <= f) {
+				k = num.get(i);
+				num.set(i, num.get(f));
+				num.set(f, k);
+				System.out.println("Esquerda "+num.get(i));
+				System.out.println("Direita "+num.get(f));
+				i = i + 1;
+				f = f - 1;
+			}
+		}
+		if (f > ini)
+			QuickSort(num, ini, f);
+
+		if (i < fim)
+			QuickSort(num, i, fim);
+
+	}
 }
