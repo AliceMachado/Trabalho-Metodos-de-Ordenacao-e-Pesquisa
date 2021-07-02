@@ -9,7 +9,7 @@ public class PesquisaLinear {
 		int lugar = 0;
 		
 		
-		//a parti daqui Ã© a funÃ§Ã£o linear simples, 
+		//pergunta qual numero o usuari deseja
 		System.out.println("Qual é o número que você busca?");
 		Scanner leitor = new Scanner(System.in);
 		long buscado = leitor.nextLong();
