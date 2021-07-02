@@ -8,20 +8,20 @@ public class pesquisaBinaria {
 
 		long inicio = 0;
 		long meio = 0;
-		long fim = numeros.length - 1;
+		long fim = numeros.size() - 1;
 		long x = 0;
 
 		while (inicio <= fim) {
 			meio = (fim + inicio) / 2;
 
-			System.out.println("Inicio: " + numeros[inicio] + " - Meio: " + numeros[meio] + " - Fim: " + numeros[fim]);
+			System.out.println("Inicio: " + numeros.get((int) inicio) + " - Meio: " + numeros.get((int) meio) + " - Fim: " + numeros.get((int) fim));
 			System.out.println("Inicio: " + inicio + " - Meio: " + meio + " - Fim: " + fim);
 
-			if (numeros[meio] == x) {
+			if (numeros.get((int) meio) == x) {
 				System.out.println("Encontrou o número " + x);
 				break;
 			}
-			if (numeros[meio] < x) {
+			if (numeros.get((int) meio) < x) {
 				inicio = meio + 1;
 			} else {
 
