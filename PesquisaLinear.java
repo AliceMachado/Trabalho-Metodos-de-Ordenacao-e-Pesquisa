@@ -29,7 +29,7 @@ public class PesquisaLinear {
 		if (achou == true) {
 			System.out.println("Achou e está na posição "  + lugar);
 		}else {
-			System.out.println("Não achou");
+			System.out.println("Não encontrou o numero desejado");
 		}
 		
 		leitor.close();
