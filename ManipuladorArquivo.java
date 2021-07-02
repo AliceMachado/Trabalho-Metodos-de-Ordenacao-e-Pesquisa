@@ -82,6 +82,7 @@ public class ManipuladorArquivo{
         	for(int i = 0; i < numeros.size(); i++) {
 			System.out.println(numeros.get(i));
 		}
+		Pesquisas.pesquisa(null);
 		buffRead.close();
 	}
 }
