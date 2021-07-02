@@ -7,15 +7,14 @@ public class ManipuladorArquivo{
 	
 	public static String linha;
 	public static int linha_num;
+	public static ArrayList<Long> numeros = new ArrayList<Long>();
 	
 	public static void leitorInsertionSort(String path) throws IOException {
 		//Insertion sort
 		int j, x;
 		BufferedReader buffRead = new BufferedReader(new FileReader(path));
 		linha = buffRead.readLine();
-		
-		ArrayList<Integer> numeros = new ArrayList<>();
-		
+				
 		while (true) {
 			if (linha != null) {
 				linha_num = Integer.parseInt(linha);
