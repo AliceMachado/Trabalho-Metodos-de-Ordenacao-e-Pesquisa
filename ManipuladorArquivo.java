@@ -47,51 +47,51 @@ public class ManipuladorArquivo{
 		buffRead.close();
 	}
 	
-	public static void leitorBubbleSort(String path) throws IOException {
-		//Bubble sort
-		
-		BufferedReader buffRead = new BufferedReader(new FileReader(path));
-		linha = buffRead.readLine();
-		
-		
-		
-		while (true) {
+	public static class leitorBubbleSort {
+		public static void leitor(String path) throws IOException {
+			// Bubble sort
+			BufferedReader buffRead = new BufferedReader(new FileReader(path));
+			linha = buffRead.readLine();
+
+			ArrayList<Long> numeros = new ArrayList<Long>();
+
+			while (true) {
 				if (linha != null) {
 					linha_num = Long.parseLong(linha);
-					numeros.add((long) linha_num);
-			        Arrays.toString(numeros.toArray());
+					numeros.add(linha_num);
+					Arrays.toString(numeros.toArray());
 				} else
 					break;
-	        for(int i = 0; i < numeros.size() - 1; i++) {
-	        	boolean estaOrdenado = true;
-			    for(int j = 0; j < numeros.size() - 1 - i; j++) {
-			    	if(numeros.get(j) > numeros.get(j + 1)) {
-			    		Long aux = numeros.get(j);
-			    		numeros.set(j, numeros.get(j + 1));
-			    		numeros.set(j + 1, aux);
-			    		estaOrdenado = false;
-			    	}
-			    }
-			    if(estaOrdenado)
-			        break;
+				
+				for (int i = 0; i < numeros.size() - 1; i++) {
+					boolean estaOrdenado = true;
+					for (int j = 0; j < numeros.size() - 1 - i; j++) {
+						if (numeros.get(j) > numeros.get(j + 1)) {
+							long aux = numeros.get(j);
+							numeros.set(j, numeros.get(j + 1));
+							numeros.set(j + 1, aux);
+							estaOrdenado = false;
+						}
+					}
+					if (estaOrdenado)
+						break;
+				}
+				for (int i = 0; i < numeros.size(); i++) {
+					numeros.get(i);
+					if (numeros.get(i) > linha_num) {
+						linha_num = numeros.get(i);
+					}
+				}
+				linha = buffRead.readLine();
 			}
-	        
-	        for (int i = 0; i < numeros.size(); i++) { 
-	        	numeros.get(i);
-	            if(numeros.get(i) > linha_num){
-	                linha_num = numeros.get(i);
-	            }
-	        }
-		linha = buffRead.readLine();
+			for(int i = 0; i < numeros.size(); i++) {
+				System.out.println(numeros.get(i));
+			}
+			Pesquisas.pesquisa(null);
+			buffRead.close();
 		}
-        
-        	for(int i = 0; i < numeros.size(); i++) {
-			System.out.println(numeros.get(i));
-		}
-    	Pesquisas.pesquisa(null);
-		buffRead.close();
-
 	}
+	
 	public static class leitorQuickSort{
         public static void leitor(ArrayList<Long> num, int ini, int fim) {
             int i = ini;
