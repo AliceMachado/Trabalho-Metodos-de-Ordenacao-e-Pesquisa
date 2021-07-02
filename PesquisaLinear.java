@@ -3,7 +3,7 @@ package Ordenação;
 import java.util.Scanner;
 
 public class PesquisaLinear {
-	boolean achou = false;	
+		boolean achou = false;	
 	int lugar = 0;
 	
 	
@@ -15,8 +15,8 @@ public class PesquisaLinear {
 	
 	
 	//percorre o vetor para ver se acha o que foi pedido
-	for (int j = 0; j < numeros.length; j++) {
-		if (teste[j] == buscado) {
+	for (int j = 0; j < numeros.size(); j++) {
+		if (numeros.get(j) == buscado) {
 			//se caso o que procura foi achado ele torna a variavel para true
 			achou = true;
 			lugar = i - 1;
