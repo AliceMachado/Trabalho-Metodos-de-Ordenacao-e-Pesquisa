@@ -26,17 +26,14 @@ public class ManipuladorArquivo{
 				linha = buffRead.readLine();
 			}
         
-        for (int i = 0; i < numeros.size(); i++) {  
-        	numeros.set(i, linha_num);
-        }
-        for (int i = 1; i < numeros.size(); i++) {
-        x = numeros.get(i);	
-        j = i - 1;
-        
-        for (j = i - 1; j>=0 && x < numeros.get(j); j--) {
-        	numeros.set(j+1, numeros.get(j));
-        	numeros.set(j+1, x);
-        }
+      for (int i = 1; i < numeros.size(); i++) {
+	        x = numeros.get(i);
+	        j = i - 1;
+	            while (j >= 0 && numeros.get(j) > x) {
+	                numeros.set(j + 1, numeros.get(j));
+	                j = j - 1;
+	            }
+	            numeros.set(j + 1, x);
         
         System.out.println(numeros);
 		buffRead.close();
