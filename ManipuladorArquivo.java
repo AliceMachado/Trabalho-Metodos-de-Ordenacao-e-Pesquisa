@@ -4,7 +4,7 @@ import java.util.*;
 import java.io.*;
 
 import Ordenação.PesquisaLinear;
-import Ordenar.pesquisaBinaria;
+import Ordenação.pesquisaBinaria;
 
 public class ManipuladorArquivo{
 	
