@@ -1,15 +1,15 @@
 package intro3;
 
+import java.util.ArrayList;
+
 public class pesquisaBinaria {
 
-	public static void main(String[] args) {
+	public static void binaria(final ArrayList<Long> numeros) {
 
-		int[] numeros = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-
-		int inicio = 0;
-		int meio = 0;
-		int fim = numeros.length - 1;
-		int x = 0;
+		long inicio = 0;
+		long meio = 0;
+		long fim = numeros.length - 1;
+		long x = 0;
 
 		while (inicio <= fim) {
 			meio = (fim + inicio) / 2;
@@ -18,7 +18,7 @@ public class pesquisaBinaria {
 			System.out.println("Inicio: " + inicio + " - Meio: " + meio + " - Fim: " + fim);
 
 			if (numeros[meio] == x) {
-				System.out.println("Encontrou o número " + x);
+				System.out.println("Encontrou o nÃºmero " + x);
 				break;
 			}
 			if (numeros[meio] < x) {
@@ -28,7 +28,7 @@ public class pesquisaBinaria {
 				fim = meio - 1;
 
 				if (inicio > fim) {
-					System.out.println("Não encontrou o número " + x);
+					System.out.println("NÃ£o encontrou o nÃºmero " + x);
 
 				}
 
