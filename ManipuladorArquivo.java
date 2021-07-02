@@ -92,53 +92,58 @@ public class ManipuladorArquivo{
 		buffRead.close();
 
 	}
-	public static void QuickSort(ArrayList<Long> num, int ini, int fim) {
-		int i = ini;
-		int f = fim;
-		Long pivo = num.get((int) ((i + f) / 2));
-		Long k;
+	public static class leitorQuickSort{
+        public static void leitor(ArrayList<Long> num, int ini, int fim) {
+            int i = ini;
+            int f = fim;
+            Long pivo = num.get((int) ((i + f) / 2));
+            Long k;
 
-		while (i <= f) {
-			while (num.get(i) < pivo) {
-				i = i + 1;
-			}
-			while (num.get(f) > pivo) {
-				f = f - 1;
-			}
-			if (i <= f) {
-				k = num.get(i);
-				num.set(i, num.get(f));
-				num.set(f, k);
-				System.out.println("Esquerda "+num.get(i));
-				System.out.println("Direita "+num.get(f));
-				i = i + 1;
-				f = f - 1;
-			}
-		}
-		if (f > ini)
-			QuickSort(num, ini, f);
+            while (i <= f) {
+                while (num.get(i) < pivo) {
+                    i = i + 1;
+                }
+                while (num.get(f) > pivo) {
+                    f = f - 1;
+                }
+                if (i <= f) {
+                    k = num.get(i);
+                    num.set(i, num.get(f));
+                    num.set(f, k);
+                    i = i + 1;
+                    f = f - 1;
+                }
+            }
+            if (f > ini) {
+                leitor(num, ini, f);
+            }
+            if (i < fim) {
+                leitor(num, i, fim);
+            }
+            for(int j = 0; j < num.size(); j++) {
+                System.out.println(num.get(j));
+            }
+        }
+        public static ArrayList<Long> leitor(String path) throws IOException{
 
-		if (i < fim)
-			QuickSort(num, i, fim);
+            BufferedReader buffRead = new BufferedReader(new FileReader(path));
+            linha = buffRead.readLine();
 
-	}
-	public static ArrayList<Long> leitorQuickSort() throws IOException{
-        String path = "C:/Users/Lucas/Desktop/ordenacao_e_pesquisa/src/NumerosOrdenarArquivo1.txt";
+            ArrayList<Long> numeros = new ArrayList<Long>();
 
-        BufferedReader buffRead = new BufferedReader(new FileReader(path));
-		linha = buffRead.readLine();
-		
-		ArrayList<Long> numeros = new ArrayList<Long>();
-		
-		while (true) {
-			if (linha != null) {
-				linha_num = Long.parseLong(linha);
-				numeros.add(linha_num);
-		        Arrays.toString(numeros.toArray());
-			} else
-				break;
-				linha = buffRead.readLine();
-			}
-		Sort(numeros, 0, numeros.size() - 1);
+            while (true) {
+                if (linha != null) {
+                    linha_num = Long.parseLong(linha);
+                    numeros.add(linha_num);
+                    Arrays.toString(numeros.toArray());
+                } else
+                    break;
+                    linha = buffRead.readLine();
+                }
+            leitor(numeros, 0, numeros.size() - 1);
+            Pesquisas.pesquisa(null);
+            buffRead.close();
+            return numeros;
+        }
     }
 }
