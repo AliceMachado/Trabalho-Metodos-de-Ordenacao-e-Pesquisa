@@ -3,34 +3,31 @@ package Ordenação;
 import java.util.Scanner;
 
 public class PesquisaLinear {
-	int[] teste = new int [8];
-	boolean achou = false;		
+	boolean achou = false;	
+	int lugar = 0;
 	
-	//apenas simulando o vetor do arquivo
-	for(int i = 0; i < teste.length; i++) {
-		teste[i] = (int) (Math.random() * 10);
-		System.out.println(teste[i]);
-	}
-	//até aqui
 	
-	//a parti daqui é a função linear simples, 
-	System.out.println("Qual é o número que você busca?");
+	//a parti daqui Ã© a funÃ§Ã£o linear simples, 
+	System.out.println("Qual Ã© o nÃºmero que vocÃª busca?");
 	Scanner leitor = new Scanner(System.in);
 	int buscado = leitor.nextInt();
 	
+	
+	
 	//percorre o vetor para ver se acha o que foi pedido
-	for (int j = 0; j < teste.length; j++) {
+	for (int j = 0; j < numeros.length; j++) {
 		if (teste[j] == buscado) {
 			//se caso o que procura foi achado ele torna a variavel para true
 			achou = true;
+			lugar = i - 1;
 		}
 	}
 	
 	//indica se achou ou nao, pretendo melhorar essa parte, indicando qual foi o numero buscado
 	if (achou == true) {
-		System.out.println("Achou");
+		System.out.println("Achou e está na posição "  + lugar);
 	}else {
-		System.out.println("Não achou");
+		System.out.println("NÃ£o achou");
 	}
 	
 	leitor.close();
