@@ -23,6 +23,9 @@ public class Pesquisas {
 				//chama o metodo de pesquisa linear
 		 		PesquisaLinear.pesquisaLinear(ManipuladorArquivo.numeros);
 		 		break;
+			default:
+		 		System.out.println("Opção incorreta!");
+		 		break;	
 		}		
 	}
 }
