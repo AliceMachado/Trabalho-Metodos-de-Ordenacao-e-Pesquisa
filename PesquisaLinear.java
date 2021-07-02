@@ -5,11 +5,12 @@ import java.util.Scanner;
 
 public class PesquisaLinear {
 	public static void pesquisaLinear(final ArrayList<Long> numeros) {
+		// TODO Auto-generated method stub
 		boolean achou = false;	
 		int lugar = 0;
 		
 		
-		//pergunta qual numero o usuari deseja
+		//a parti daqui Ã© a funÃ§Ã£o linear simples, 
 		System.out.println("Qual é o número que você busca?");
 		Scanner leitor = new Scanner(System.in);
 		long buscado = leitor.nextLong();
@@ -25,11 +26,11 @@ public class PesquisaLinear {
 			}
 		}
 		
-		//indica se achou ou nao, pretendo melhorar essa parte
+		//indica se achou ou nao, pretendo melhorar essa parte, indicando qual foi o numero buscado
 		if (achou == true) {
-			System.out.println("Achou e está na posição "  + lugar);
+			System.out.println("O número foi encontrado na posição "  + lugar);
 		}else {
-			System.out.println("Não encontrou o numero desejado");
+			System.out.println("O número não foi encontrado");
 		}
 		
 		leitor.close();
