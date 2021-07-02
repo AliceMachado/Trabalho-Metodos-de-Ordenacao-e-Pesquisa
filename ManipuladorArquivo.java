@@ -6,7 +6,7 @@ import java.io.*;
 public class ManipuladorArquivo{
 	
 	public static String linha;
-	public static double linha_num;
+	public static int linha_num;
 	
 	public static void leitorInsertionSort(String path) throws IOException {
 		//Insertion sort
