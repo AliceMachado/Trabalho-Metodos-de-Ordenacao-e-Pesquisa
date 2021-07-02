@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Pesquisas {
 
 	public static void pesquisa(String[] args) {
-		//isso aqui define qual pesquisa o usuaro deseja realizar
 		Scanner teclado = new Scanner(System.in);
 		int opcao = 0;
 		
@@ -16,16 +15,15 @@ public class Pesquisas {
 		
 		switch(opcao) {
 		 	case 1: 
-		 		//chama metodo pesquisa binaria
-				pesquisaBinaria.binaria(ManipuladorArquivo.numeros);
+		 		pesquisaBinaria.binaria(ManipuladorArquivo.numeros);
 		 		break;
 		 	case 2:
-				//chama o metodo de pesquisa linear
 		 		PesquisaLinear.pesquisaLinear(ManipuladorArquivo.numeros);
 		 		break;
-			default:
+		 	default:
 		 		System.out.println("Opção incorreta!");
-		 		break;	
+		 		break;
 		}		
+	teclado.close();
 	}
 }
