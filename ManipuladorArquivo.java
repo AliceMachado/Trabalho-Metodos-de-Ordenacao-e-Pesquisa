@@ -11,7 +11,7 @@ public class ManipuladorArquivo{
 	
 	public static void leitorInsertionSort(String path) throws IOException {
 		//Insertion sort
-		int j, x;
+		long j, x;
 		BufferedReader buffRead = new BufferedReader(new FileReader(path));
 		linha = buffRead.readLine();
 				
@@ -37,6 +37,7 @@ public class ManipuladorArquivo{
 		for(int i = 0; i < numeros.size(); i++) {
 			System.out.println(numeros.get(i));
 		}
+		Pesquisas.pesquisa(null);
 		buffRead.close();
 	}
 	
@@ -81,6 +82,7 @@ public class ManipuladorArquivo{
         	for(int i = 0; i < numeros.size(); i++) {
 			System.out.println(numeros.get(i));
 		}
+		// serve para chamar o metodo de pesquisa
 		Pesquisas.pesquisa(null);
 		buffRead.close();
 	}
