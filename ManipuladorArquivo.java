@@ -121,4 +121,23 @@ public class ManipuladorArquivo{
 			QuickSort(num, i, fim);
 
 	}
+	public static ArrayList<Long> leitorQuickSort() throws IOException{
+        String path = "C:/Users/Lucas/Desktop/ordenacao_e_pesquisa/src/NumerosOrdenarArquivo1.txt";
+
+        BufferedReader buffRead = new BufferedReader(new FileReader(path));
+		linha = buffRead.readLine();
+		
+		ArrayList<Long> numeros = new ArrayList<Long>();
+		
+		while (true) {
+			if (linha != null) {
+				linha_num = Long.parseLong(linha);
+				numeros.add(linha_num);
+		        Arrays.toString(numeros.toArray());
+			} else
+				break;
+				linha = buffRead.readLine();
+			}
+		Sort(numeros, 0, numeros.size() - 1);
+    }
 }
