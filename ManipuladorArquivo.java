@@ -120,10 +120,10 @@ public class ManipuladorArquivo{
 			}
 		    }
 		    if (f > ini) {
-			leitor(numeros, ini, f);
+			leitor(ini, f);
 		    }
 		    if (i < fim) {
-			leitor(numeros, i, fim);
+			leitor(i, fim);
 		    }
         }
         
@@ -143,7 +143,7 @@ public class ManipuladorArquivo{
 				break;
 				linha = buffRead.readLine();
 			}
-		 leitor(numeros, 0, numeros.size() - 1);
+		 leitor(0, numeros.size() - 1);
 		 Pesquisas.pesquisa();
 
 		 long tempofinal = System.currentTimeMillis();
