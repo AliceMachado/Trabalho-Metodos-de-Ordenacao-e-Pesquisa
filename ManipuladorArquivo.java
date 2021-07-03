@@ -13,6 +13,7 @@ public class ManipuladorArquivo{
 	public static class leitorInsertionSort {
 		public static void leitor(String path) throws IOException {
 			//Insertion sort
+			System.out.println("O arquivo está sendo processado, por favor aguarde!");
 			long tempoinicial = System.currentTimeMillis();
 
 			int j;
@@ -52,6 +53,7 @@ public class ManipuladorArquivo{
 	public static class leitorBubbleSort {
 		public static void leitor(String path) throws IOException {
 			// Bubble sort
+			System.out.println("O arquivo está sendo processado, por favor aguarde!");
 			long tempoinicial = System.currentTimeMillis();
 			
 			BufferedReader buffRead = new BufferedReader(new FileReader(path));
@@ -129,6 +131,7 @@ public class ManipuladorArquivo{
         
         public static void leitor(String path) throws IOException {
 
+		System.out.println("O arquivo está sendo processado, por favor aguarde!");
 		long tempoinicial = System.currentTimeMillis();
 
 		BufferedReader buffRead = new BufferedReader(new FileReader(path));
