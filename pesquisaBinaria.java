@@ -9,7 +9,12 @@ public class pesquisaBinaria {
 		long inicio = 0;
 		long meio = 0;
 		long fim = numeros.size() - 1;
-		long x = 0;
+		long x;
+		
+		Scanner teclado = new Scanner(System.in);
+		
+		System.out.println("Digite o número que deseja encontrar: ");
+		x = teclado.nextLong()
 
 		while (inicio <= fim) {
 			meio = (fim + inicio) / 2;
