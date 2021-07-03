@@ -39,9 +39,6 @@ public class ManipuladorArquivo{
 				}
 				numeros.set(j + 1, x);
 			}
-			for(int i = 0; i < numeros.size(); i++) {
-				System.out.println(numeros.get(i));
-			}
 			Pesquisas.pesquisa();
 
 			long tempofinal = System.currentTimeMillis();
@@ -90,9 +87,6 @@ public class ManipuladorArquivo{
 				}
 				linha = buffRead.readLine();
 			}
-			for(int i = 0; i < numeros.size(); i++) {
-				System.out.println(numeros.get(i));
-			}
 			Pesquisas.pesquisa();
 			
 			long tempofinal = System.currentTimeMillis();
@@ -130,10 +124,6 @@ public class ManipuladorArquivo{
 		    }
 		    if (i < fim) {
 			leitor(numeros, i, fim);
-		    }
-
-		    for(int j = 0; j < numeros.size(); j++) {
-			System.out.println(numeros.get(j));
 		    }
         }
         
