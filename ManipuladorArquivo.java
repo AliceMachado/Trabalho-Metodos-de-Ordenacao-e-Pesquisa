@@ -88,10 +88,10 @@ public class ManipuladorArquivo{
 	}
 	
 	public static class leitorQuickSort{
-        public static void leitor(ArrayList<Long> num, int ini, int fim) {
+        public static void leitor(int ini, int fim) {
             int i = ini;
             int f = fim;
-            Long pivo = num.get((int) ((i + f) / 2));
+            Long pivo = numeros.get((int) ((i + f) / 2));
             Long k;
 
             while (i <= f) {
@@ -116,7 +116,7 @@ public class ManipuladorArquivo{
                 leitor(numeros, i, fim);
             }
             
-            //for(int j = 0; j < num.size(); j++) {
+            //for(int j = 0; j < numeros.size(); j++) {
             //    System.out.println(numeros.get(j));
             //}
             System.out.println(numeros);
