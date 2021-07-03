@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PesquisaLinear {
-	public static void pesquisaLinear(final ArrayList<Long> numeros) {
+	public static void pesquisaLinear(ArrayList<Long> numeros) {
 		// TODO Auto-generated method stub
 		boolean achou = false;	
 		int lugar = 0;
