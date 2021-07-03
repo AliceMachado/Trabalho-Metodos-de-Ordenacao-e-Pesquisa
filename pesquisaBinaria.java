@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class pesquisaBinaria {
 
-	public static void binaria(final ArrayList<Long> numeros) {
+	public static void binaria(ArrayList<Long> numeros) {
 
 		long inicio = 0;
 		long meio = 0;
