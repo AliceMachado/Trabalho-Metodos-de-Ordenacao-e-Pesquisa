@@ -3,14 +3,10 @@ package Ordenacao_e_pesquisa;
 import java.util.*;
 import java.io.*;
 
-import Ordenação.PesquisaLinear;
-import Ordenação.pesquisaBinaria;
-
 public class ManipuladorArquivo{
 	
 	public static String linha;
 	public static long linha_num;
-	public static boolean terminou = false;
 	static Scanner teclado = new Scanner(System.in);
 	public static ArrayList<Long> numeros = new ArrayList<Long>();
 	
@@ -43,7 +39,7 @@ public class ManipuladorArquivo{
 		for(int i = 0; i < numeros.size(); i++) {
 			System.out.println(numeros.get(i));
 		}
-	    Pesquisas.pesquisa(null);
+	    Pesquisas.pesquisa();
 		buffRead.close();
 	}
 	
@@ -53,7 +49,6 @@ public class ManipuladorArquivo{
 			BufferedReader buffRead = new BufferedReader(new FileReader(path));
 			linha = buffRead.readLine();
 
-			ArrayList<Long> numeros = new ArrayList<Long>();
 
 			while (true) {
 				if (linha != null) {
@@ -87,7 +82,7 @@ public class ManipuladorArquivo{
 			for(int i = 0; i < numeros.size(); i++) {
 				System.out.println(numeros.get(i));
 			}
-			Pesquisas.pesquisa(null);
+			Pesquisas.pesquisa();
 			buffRead.close();
 		}
 	}
@@ -100,36 +95,38 @@ public class ManipuladorArquivo{
             Long k;
 
             while (i <= f) {
-                while (num.get(i) < pivo) {
+                while (numeros.get(i) < pivo) {
                     i = i + 1;
                 }
-                while (num.get(f) > pivo) {
+                while (numeros.get(f) > pivo) {
                     f = f - 1;
                 }
                 if (i <= f) {
-                    k = num.get(i);
-                    num.set(i, num.get(f));
-                    num.set(f, k);
+                    k = numeros.get(i);
+                    numeros.set(i, numeros.get(f));
+                    numeros.set(f, k);
                     i = i + 1;
                     f = f - 1;
                 }
             }
             if (f > ini) {
-                leitor(num, ini, f);
+                leitor(numeros, ini, f);
             }
             if (i < fim) {
-                leitor(num, i, fim);
+                leitor(numeros, i, fim);
             }
-            for(int j = 0; j < num.size(); j++) {
-                System.out.println(num.get(j));
-            }
+            
+            //for(int j = 0; j < num.size(); j++) {
+            //    System.out.println(numeros.get(j));
+            //}
+            System.out.println(numeros);
         }
-        public static ArrayList<Long> leitor(String path) throws IOException{
+        
+        public static void leitor(String path) throws IOException {
 
             BufferedReader buffRead = new BufferedReader(new FileReader(path));
             linha = buffRead.readLine();
 
-            ArrayList<Long> numeros = new ArrayList<Long>();
 
             while (true) {
                 if (linha != null) {
@@ -141,9 +138,8 @@ public class ManipuladorArquivo{
                     linha = buffRead.readLine();
                 }
             leitor(numeros, 0, numeros.size() - 1);
-            Pesquisas.pesquisa(null);
+            Pesquisas.pesquisa();
             buffRead.close();
-            return numeros;
         }
     }
 }
