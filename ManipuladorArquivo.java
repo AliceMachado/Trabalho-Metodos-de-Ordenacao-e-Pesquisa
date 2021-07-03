@@ -12,6 +12,8 @@ public class ManipuladorArquivo{
 	
 	public static void leitorInsertionSort(String path) throws IOException {
 		//Insertion sort
+		long tempoinicial = System.currentTimeMillis();
+		
 		int j;
 		Long x;
 		BufferedReader buffRead = new BufferedReader(new FileReader(path));
@@ -39,13 +41,20 @@ public class ManipuladorArquivo{
 		for(int i = 0; i < numeros.size(); i++) {
 			System.out.println(numeros.get(i));
 		}
-	    Pesquisas.pesquisa();
+	    	Pesquisas.pesquisa();
+		
+		long tempofinal = System.currentTimeMillis();
+	        long tempototal = tempofinal - tempoinicial;
+	        System.out.println("Tempo de Processamento de InsertionSort: " + tempototal + "ms");
+		
 		buffRead.close();
 	}
 	
 	public static class leitorBubbleSort {
 		public static void leitor(String path) throws IOException {
 			// Bubble sort
+			long tempoinicial = System.currentTimeMillis();
+			
 			BufferedReader buffRead = new BufferedReader(new FileReader(path));
 			linha = buffRead.readLine();
 
@@ -83,6 +92,11 @@ public class ManipuladorArquivo{
 				System.out.println(numeros.get(i));
 			}
 			Pesquisas.pesquisa();
+			
+			long tempofinal = System.currentTimeMillis();
+	        	long tempototal = tempofinal - tempoinicial;
+	        	System.out.println("Tempo de Processamento de BubbleSort: " + tempototal + "ms");
+			
 			buffRead.close();
 		}
 	}
@@ -116,14 +130,15 @@ public class ManipuladorArquivo{
                 leitor(numeros, i, fim);
             }
             
-            //for(int j = 0; j < numeros.size(); j++) {
-            //    System.out.println(numeros.get(j));
-            //}
-            System.out.println(numeros);
+            for(int j = 0; j < numeros.size(); j++) {
+                System.out.println(numeros.get(j));
+            }
         }
         
         public static void leitor(String path) throws IOException {
 
+	    long tempoinicial = System.currentTimeMillis();
+		
             BufferedReader buffRead = new BufferedReader(new FileReader(path));
             linha = buffRead.readLine();
 
@@ -139,6 +154,11 @@ public class ManipuladorArquivo{
                 }
             leitor(numeros, 0, numeros.size() - 1);
             Pesquisas.pesquisa();
+	    
+	    long tempofinal = System.currentTimeMillis();
+	    long tempototal = tempofinal - tempoinicial;
+	    System.out.println("Tempo de Processamento de QuickSort: " + tempototal + "ms");
+		
             buffRead.close();
         }
     }
