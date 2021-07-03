@@ -4,12 +4,16 @@ import java.util.Scanner;
 
 public class Pesquisas {
 
-	public static void pesquisa(String[] args) {
+	public static void pesquisa() {
 		Scanner teclado = new Scanner(System.in);
 		int opcao = 0;
 		
+		for(int j = 0; j < ManipuladorArquivo.numeros.size(); j++) {
+            		System.out.println(ManipuladorArquivo.numeros.get(j));
+        	}
+		
 		System.out.println("Por favor, selecione o tipo de pesquisa desejada: "
-				+ "\n 1 - Pesquisa Binária " + "\n 2 - Pequisa Linear" );
+				+ "\n 1 - Pesquisa Binaria " + "\n 2 - Pequisa Linear" );
 		opcao = teclado.nextInt();
 		
 		
