@@ -39,5 +39,6 @@ public class pesquisaBinaria {
 
 			}
 		}
+		teclado.close();
 	}
 }
