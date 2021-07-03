@@ -22,15 +22,15 @@ public class Principal {
 		
 		switch (opcao) {
 		case 1:
-			ManipuladorArquivo.leitorInsertionSort(path);
+			ManipuladorArquivo.leitorInsertionSort.leitor(path);
 			break;
 		
 		case 2:
-			
+			ManipuladorArquivo.leitorQuickSort.leitor(path);
 			break;
 			
 		case 3:
-			ManipuladorArquivo.leitorBubbleSort(path);
+			ManipuladorArquivo.leitorBubbleSort.leitor(path);
 			break;
 			
 		default: extracted(opcao);
